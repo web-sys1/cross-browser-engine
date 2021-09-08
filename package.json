@@ -1,17 +1,17 @@
 {
-  "name": "puppeteer-demo",
-  "version": "1.0.0",
+  "name": "cross-browser-engine",
+  "version": "1.0.2",
   "description": "A small project to demo how to use Puppeteer to take screenshots of a browser window",
   "main": "index.js",
-  "author": "whitep4nth3r",
+  "author": "web-sys1",
   "license": "MIT",
   "private": false,
   "engines": {
     "node": "14.x"
   },
   "dependencies": {
-    "chrome-aws-lambda": "^7.0.0",
-    "puppeteer": "^7.1.0",
-    "puppeteer-core": "^7.1.0"
+    "chrome-aws-lambda": "^10.1.0",
+    "puppeteer": "^10.2.0",
+    "puppeteer-core": "^10.2.0"
   }
 }
