@@ -56,6 +56,7 @@ module.exports = async (req, res) => {
 
   try {
     // check for https for safety!
+	
     if (!pageToScreenshot.includes("https://")) {
       res.statusCode = 404;
       res.json({
