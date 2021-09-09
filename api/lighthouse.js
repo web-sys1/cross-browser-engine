@@ -75,16 +75,16 @@ module.exports = async (req, res) => {
 	 screenEmulation: {
 		deviceScaleRatio: 1,
 		deviceScaleFactor: 1,
-        mobile: this.isMobile,
-        disabled: false,
+                mobile: this.isMobile,
+                disabled: false,
        },
-     formFactor: this.formFactor,
-	 locale: lang,
-     throttling: { 
+        formFactor: this.formFactor,
+        locale: lang,
+        throttling: { 
 		downloadThroughputKbps: 0,
-	    rttMs: 40,
+	        rttMs: 40,
 		requestLatencyMs: -10,
-        throughputKbps: 10240,
+                throughputKbps: 10240,
 		uploadThroughputKbps: 0
 	   }
 	};
@@ -112,8 +112,10 @@ module.exports = async (req, res) => {
 	}
 	
     } catch (e) {
-    res.statusCode = 400;
-	var error = {body: "Sorry, Something went wrong! Probably, the problem is with the system. Please try again!",error: e.message}
-    res.end(JSON.stringify(error, null, 2));
+      res.statusCode = 500;
+      res.json({
+      body: "Sorry, Something went wrong! Probably, the problem is with the system. Please try again!",
+      errorMessage: e,
+    });
   }
 };
