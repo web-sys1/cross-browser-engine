@@ -112,7 +112,6 @@ module.exports = async (req, res) => {
 	}
 	
     } catch (e) {
-    res.setHeader("Content-Type", `application/json`);
     res.statusCode = 400;
 	var error = {body: "Sorry, Something went wrong! Probably, the problem is with the system. Please try again!",error: e.message}
     res.end(JSON.stringify(error, null, 2));
