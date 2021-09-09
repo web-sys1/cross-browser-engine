@@ -45,8 +45,8 @@ module.exports = async (req, res) => {
 
     // launch a new headless browser with dev / prod options
     const browser = await puppeteer.launch(options);
-	const sessionPort = new URL(browser.wsEndpoint()).port;
-	const emulator = req.query.emulator;
+    const sessionPort = new URL(browser.wsEndpoint()).port;
+    const emulator = req.query.emulator;
     const page = await browser.newPage();
 	
 	var isMobile;
@@ -62,8 +62,7 @@ module.exports = async (req, res) => {
 		this.emulatedUserAgent = userAgents.mobile,
 		this.formFactor = 'mobile'
      } else { 
-	    res.setHeader("Content-Type", `application/json`);
-        res.statusCode = 403;
+            res.statusCode = 403;
 	    res.end(JSON.stringify({"body": "Something went wrong! Unable to proceed.", error: "You probably missed 'emulator' param, which is required to simulate device.", "code": res.statusCode}, null, 2))
 	 }
 	
@@ -100,22 +99,19 @@ module.exports = async (req, res) => {
 	
 	if (output == 'json') {
 	  const indent = req.query.indentation
-	  res.setHeader("Content-Type", `application/json`);
-      res.end(JSON.stringify(lh.lhr, null, indent));
+          res.end(JSON.stringify(lh.lhr, null, indent));
 	} else if (output == 'html') {
-      res.setHeader("Content-Type", `text/html`);
-      res.send(lh.report);
+          res.send(lh.report);
 	} else if(!output) {
 	   res.statusCode = 400;
-	   res.setHeader("Content-Type", `application/json`);
 	   res.end(JSON.stringify({error: "You didn't set 'output' param. Did you forget 'json' or 'html'?"}, null, 2));
 	}
 	
     } catch (e) {
       res.statusCode = 500;
-      res.json({
-      body: "Sorry, Something went wrong! Probably, the problem is with the system. Please try again!",
-      errorMessage: e,
+      res.end({
+        body: "Sorry, Something went wrong! Probably, the problem is with the system. Please try again!",
+        errorMessage: e,
     });
   }
 };
