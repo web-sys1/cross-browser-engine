@@ -109,8 +109,6 @@ module.exports = async (req, res) => {
 	
     } catch (e) {
       res.statusCode = 500;
-      res.json({
-        body: "Sorry, Something went wrong! Probably, the problem is with the system. Please try again!",
-    });
+      res.send("Sorry, Something went wrong! Probably, the problem is with the system. Please try again!");
   }
 };
