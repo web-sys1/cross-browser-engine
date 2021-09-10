@@ -10,8 +10,25 @@
     "node": "14.x"
   },
   "dependencies": {
+<<<<<<< HEAD
     "chrome-aws-lambda": "^10.1.0 ",
+=======
+    "chrome-aws-lambda": "^10.1.0",
+    "got": "~11.8.1",
+>>>>>>> e4d7d15 ( update)
     "lighthouse": "^8.3.0",
+    "metascraper": "^5.24.2",
+    "metascraper-author": "^5.24.2",
+    "metascraper-clearbit": "^5.24.2",
+    "metascraper-date": "^5.24.2",
+    "metascraper-description": "^5.24.2",
+    "metascraper-image": "^5.24.2",
+    "metascraper-logo": "^5.24.2",
+    "metascraper-publisher": "^5.24.2",
+    "metascraper-title": "^5.24.2",
+    "metascraper-url": "^5.24.2",
+    "micri": "^4.3.0",
+    "puppeteer": "^10.1.0",
     "puppeteer-core": "^10.2.0"
   }
 }
