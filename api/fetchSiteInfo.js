@@ -13,8 +13,10 @@ module.exports = async (req, res) => {
     meta: true,
   })
 
+  const referenceDetails = {status, data, statusCode: response.statusCode, headers: response.headers}
+  
   console.log(status, data)
         
-  await send(res, 200, JSON.stringify(data, null, 2))
+  await send(res, 200, JSON.stringify(referenceDetails, null, 2))
 
 }
