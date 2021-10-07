@@ -1,7 +1,7 @@
 {
   "name": "cross-browser-engine",
   "version": "1.0.2",
-  "description": "A small project to demo how to use Puppeteer to take screenshots of a browser window",
+  "description": "A small project to demo how to use Puppeteer and MQL to take screenshots of a browser window",
   "main": "index.js",
   "author": "web-sys1",
   "license": "MIT",
@@ -10,6 +10,7 @@
     "node": "14.x"
   },
   "dependencies": {
+    "@microlink/mql": "^0.10.0",
     "chrome-aws-lambda": "^10.1.0 ",
     "chrome-aws-lambda": "^10.1.0",
     "got": "~11.8.1",
