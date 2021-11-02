@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/sitetech.js": {
+      "maxDuration": 40
+    }
+  }
+}
